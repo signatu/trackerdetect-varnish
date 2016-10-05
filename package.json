@@ -1,0 +1,14 @@
+{
+  "name": "trackerdetect-varnish",
+  "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "signatu/trackerdetect-varnish",
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
+  "scripts": {
+    "build": "docker build -t $DOCKER_REPO/trackerdetect-varnish:latest .",
+    "postbuild": "docker push $DOCKER_REPO/trackerdetect-varnish:latest",
+    "deploy": "echo Deploy this from the trackerdetect repo - no action taken"
+  }
+}
